@@ -1,0 +1,17 @@
+[package]
+name = "aleo-sign-t2"
+version = "1.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["cargo"] }
+rand = "0.8"
+snarkvm_n2 = { package = "snarkvm-dpc", version = "=0.8.0", default-features = false, features = ["testnet2"] }
+aleo-std = { version = "=0.1.24", features = ["storage", "cpu"] }
+snarkvm-parameters = { version = "=0.8.0", default-features = false, features = ["wasm"] }
+snarkvm-algorithms = { version = "=0.8.0", default-features = false, features = ["crh", "hash_to_curve", "crypto_hash", "fft", "msm"] }
+snarkvm-gadgets = { version = "=0.8.0" }
+reqwest = { version = "=0.11.24", default-features = false, features = ["native-tls-vendored"] }
